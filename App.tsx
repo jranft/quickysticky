@@ -16,6 +16,7 @@ import {
 import analytics from '@react-native-firebase/analytics';
 import DeviceInfo from 'react-native-device-info';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { X } from 'lucide-react-native';
 
 // Constants
 const windowWidth = Dimensions.get('window').width;
@@ -78,6 +79,7 @@ function App(): React.JSX.Element {
  const [isKeyboardVisible, setKeyboardVisible] = useState<boolean>(false);
  const [nextNoteColor, setNextNoteColor] = useState<string>(NOTE_COLORS[0]);
  const flatListRef = useRef<FlatList>(null);
+ const textInputRef = useRef<TextInput>(null);
 
  // Track app open and device info
  useEffect(() => {
@@ -223,6 +225,22 @@ function App(): React.JSX.Element {
    );
  };
 
+const toggleKeyboard = async () => {
+  if (isKeyboardVisible) {
+    Keyboard.dismiss();
+    await analytics().logEvent('keyboard_hidden', {
+      action: 'hide',
+      timestamp: new Date().toISOString()
+    });
+  } else {
+    textInputRef.current?.focus();
+    await analytics().logEvent('keyboard_shown', {
+      action: 'show',
+      timestamp: new Date().toISOString()
+    });
+  }
+};
+
  const renderNote = ({ item }: { item: Note }) => (
    <TouchableOpacity 
      style={[
@@ -252,21 +270,34 @@ function App(): React.JSX.Element {
          ]} 
          onPress={() => setIsEditing(true)}
        >
-         <TextInput
-           style={styles.input}
-           placeholder="Start your note..."
-           placeholderTextColor="#666"
-           value={currentNote}
-           onChangeText={(text) => {
-             setCurrentNote(text);
-             if (!isEditing) setIsEditing(true);
-           }}
-           multiline
-           blurOnSubmit={false}
-           keyboardDismissMode="on-drag"
-           autoCorrect={false}
-         />
-       </TouchableOpacity>
+		<TextInput
+		  ref={textInputRef}
+		  style={styles.input}
+		  placeholder="Start your note..."
+		  placeholderTextColor="#666"
+		  value={currentNote}
+		  onChangeText={(text) => {
+			setCurrentNote(text);
+			if (!isEditing) setIsEditing(true);
+		  }}
+		  multiline
+		  blurOnSubmit={false}
+		  keyboardDismissMode="on-drag"
+		  autoCorrect={false}
+		/>
+			<TouchableOpacity 
+			  style={[styles.keyboardToggle, {
+				backgroundColor: '#f0f0f0',
+				borderRadius: 8,
+			  }]}
+			  onPress={toggleKeyboard}
+			>
+			  <Text style={{ color: '#999', fontWeight: 'bold', fontSize: 12 }}>
+				{isKeyboardVisible ? 'hide keyboard' : 'show keyboard'}
+			  </Text>
+			</TouchableOpacity>
+		</TouchableOpacity>
+		
        
        {isEditing && currentNote.trim().length > 0 && (
          <View style={styles.buttonContainer}>
@@ -344,11 +375,11 @@ const styles = StyleSheet.create({
    shadowRadius: 4,
    elevation: 3,
  },
- input: {
-   fontSize: 20,
-   flex: 1,
-   fontFamily: 'MPLUSRounded1c-Bold',
- },
+input: {
+  fontSize: 20,
+  flex: 1,
+  fontFamily: 'Rounded Mplus 1c Bold',
+},
  buttonContainer: {
    flexDirection: 'row',
    justifyContent: 'space-between',
@@ -403,10 +434,10 @@ const styles = StyleSheet.create({
    flex: 1,
    justifyContent: 'space-between',
  },
- noteText: {
-   fontSize: 12,
-   fontFamily: 'MPLUSRounded1c-Bold',
- },
+noteText: {
+  fontSize: 10,
+  fontFamily: 'Rounded Mplus 1c Bold',
+},
  timestamp: {
    fontSize: 10,
    color: '#666',
@@ -429,7 +460,14 @@ const styles = StyleSheet.create({
  feedbackButtonText: {
    color: 'white',
    fontSize: 12,
- }
+ },
+keyboardToggle: {
+  position: 'absolute',
+  bottom: 15,
+  right: 15,
+  padding: 8,
+  zIndex: 1,
+}
 });
 
 export default App;
