@@ -7,7 +7,7 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1089167049703:android:PLACEHOLDER",
+        "mobilesdk_app_id": "1:1089167049703:android:1f67ab84229ebf2c283342",
         "android_client_info": {
           "package_name": "com.notesy"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "PLACEHOLDER_API_KEY"
+          "current_key": "AIzaSyAaww9NXcu2xeRUQewFevKtZ8_efs8K6G8"
         }
       ],
       "services": {
