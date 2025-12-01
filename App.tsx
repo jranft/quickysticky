@@ -345,12 +345,14 @@ const toggleKeyboard = async () => {
        contentContainerStyle={styles.notesList}
      />
 
-     <TouchableOpacity 
-       style={styles.feedbackButton}
-       onPress={() => Linking.openURL('https://forms.gle/UoQtnVqSHomYx3gC8')}
-     >
-       <Text style={styles.feedbackButtonText}>Suggest Improvements</Text>
-     </TouchableOpacity>
+     {!isKeyboardVisible && (
+       <TouchableOpacity
+         style={styles.feedbackButton}
+         onPress={() => Linking.openURL('https://forms.gle/UoQtnVqSHomYx3gC8')}
+       >
+         <Text style={styles.feedbackButtonText}>Suggest Improvements</Text>
+       </TouchableOpacity>
+     )}
    </SafeAreaView>
  );
 }
@@ -379,6 +381,7 @@ input: {
   fontSize: 20,
   flex: 1,
   fontFamily: 'Rounded Mplus 1c Bold',
+  textAlignVertical: 'top',
 },
  buttonContainer: {
    flexDirection: 'row',

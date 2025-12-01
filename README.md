@@ -2,9 +2,9 @@
 
 **Notesy** is a React Native sticky notes application for iOS and Android. Create, edit, and organize colorful sticky notes with persistent storage and analytics tracking.
 
-## 🚀 App Status: READY FOR UPLOAD TO GOOGLE PLAY STORE
+## 🚀 App Status: IN CLOSED TESTING - RECRUITING TESTERS
 
-This project is **READY** for Google Play Store deployment. All technical setup is complete including AAB file build. Currently waiting for Google Play Developer account identity verification to complete upload process.
+This project is in **CLOSED TESTING** phase. AAB file (v1.0.2) is built and ready. Currently recruiting 12+ testers for the required 14-day testing period before production release.
 
 ## ✨ Features
 
@@ -21,9 +21,9 @@ This project is **READY** for Google Play Store deployment. All technical setup 
 
 - **App Name**: Notesy
 - **Package**: com.notesy (Android) / iOS bundle configured
-- **Version**: 1.0.0 (Version Code: 1)
+- **Version**: 1.0.2 (Version Code: 2)
 - **Framework**: React Native 0.76.5 with TypeScript
-- **Target SDK**: Android 34, iOS 15+
+- **Target SDK**: Android 35, iOS 15+
 - **Firebase Project**: notesy-ios (with Android app added)
 
 ## 🔧 Quick Setup
@@ -131,12 +131,14 @@ cd android
 ## 🚀 Deployment Status
 
 - ✅ **iOS**: Ready for App Store (Xcode project configured)
-- ✅ **Android**: AAB file built and ready for upload (34MB)
+- ✅ **Android Build**: AAB file v1.0.2 built (34MB) - includes text alignment and UX fixes
 - ✅ **Firebase**: Production analytics configured with real credentials
 - ✅ **Signing**: Production keystore generated and working
 - ✅ **Build System**: Android Studio and SDK installed and configured
-- ⏳ **Google Play**: Developer account verification in progress
-- 📦 **AAB File**: `app/build/outputs/bundle/release/app-release.aab` (ready)
+- ✅ **Google Play Account**: Verified and active
+- 🧪 **Closed Testing**: AAB uploaded, recruiting 12+ testers for 14-day testing period
+- ⏳ **Production Access**: Waiting for testing period completion
+- 📦 **AAB File**: `app/build/outputs/bundle/release/app-release.aab` (v1.0.2, versionCode 2)
 
 ## 🔧 Troubleshooting
 

@@ -2,53 +2,60 @@
 
 ## 📱 Current Project Status
 
-**Notesy** is a React Native sticky notes app that's **READY** for Google Play Store deployment. All technical setup is complete - waiting for Google Play Developer account identity verification.
+**Notesy** is a React Native sticky notes app in **CLOSED TESTING** phase. AAB v1.0.2 is uploaded to Google Play Console. Currently recruiting 12+ testers for the required 14-day testing period before production release.
 
 ### ✅ Completed Setup
 - [x] React Native 0.76.5 with TypeScript configuration
 - [x] Firebase Analytics integration with real credentials
 - [x] Production keystore generated (`android/app/notesy-release-key.keystore`)
-- [x] Android build configuration (minSdk: 24, targetSdk: 34)
+- [x] Android build configuration (minSdk: 24, targetSdk: 35)
 - [x] Custom font integration (Rounded Mplus 1c Bold)
 - [x] App icons and assets prepared
 - [x] Package name: `com.notesy`
-- [x] App version: 1.0.0 (version code: 1)
+- [x] App version: 1.0.2 (version code: 2)
 - [x] Android Studio and SDK installed
 - [x] Production AAB file built (34MB at `app/build/outputs/bundle/release/app-release.aab`)
-- [x] Google Play Developer account created and paid ($25)
+- [x] Google Play Developer account created, paid ($25), and verified
+- [x] Android-specific fixes applied (text alignment, keyboard UX improvements)
+- [x] Target SDK updated to Android 35 (API level 35)
+- [x] AAB v1.0.2 uploaded to Closed Testing track
 
-### ⏳ Current Status: WAITING FOR IDENTITY VERIFICATION
+### 🧪 Current Status: RECRUITING BETA TESTERS
 
-**Google Play Developer Account**: Identity verification in progress (can take 24-72 hours)
+**Closed Testing Requirement**: Need 12+ testers opted-in for 14 consecutive days before production access
 
-### 🚀 Ready to Upload When Verified
+### 📋 Immediate Next Steps
 
-#### Production AAB File Details
-- **Location**: `app/build/outputs/bundle/release/app-release.aab`
-- **Size**: 34MB
-- **Build Date**: October 18, 2025
-- **Status**: ✅ Ready for upload
+#### 1. Recruit 12+ Beta Testers (IMMEDIATE ACTION REQUIRED)
 
-#### Next Steps When Account is Verified
-**When your Google Play Developer account identity is verified:**
+**Where to Find Testers:**
+- **Free Options:**
+  - Reddit: r/betatests, r/androidapps, r/androiddev
+  - BetaList.com
+  - Facebook groups: "Beta Testers for Apps", "Android App Beta Testing"
+  - Ask friends, family, colleagues
 
-1. **Check Account Status**: Visit [play.google.com/console](https://play.google.com/console)
-   - Look for "Create app" button (account approved)
-   - If still under review, wait for approval email
+- **Paid Options:**
+  - BetaFamily.com ($100-300 for campaign)
+  - Centercode.com / BetaBound.com
+  - Hybrid: Free recruiting + paid service for remaining testers ($50-150)
 
-2. **Create New App**:
-   - Click "Create app"
-   - App name: "Notesy"
-   - Default language: English (United States)
-   - App or game: App
-   - Free or paid: Free
+**What Testers Must Do:**
+1. Click the opt-in link from Google Play Console
+2. Accept to become a tester
+3. Download and install the app from Google Play
+4. Keep the app installed for 14 consecutive days
+5. Use the app at least a few times
 
-3. **Upload AAB File**:
-   - Go to "Release" → "Production"
-   - Click "Create new release"
-   - Upload: `app/build/outputs/bundle/release/app-release.aab`
+**Get Your Opt-In Link:**
+1. Go to [Google Play Console](https://play.google.com/console)
+2. Navigate to: Testing → Closed testing → Testers tab
+3. Copy the opt-in URL
+4. Share with your testers
 
-4. **Complete Store Listing** (required assets below)
+#### 2. While Recruiting: Complete Store Listing
+
+**Go to: Grow → Store presence → Main store listing**
 
 ## 🔒 Important Security Information
 
@@ -163,25 +170,39 @@ Before uploading to Play Store:
 ## 📅 Current Timeline Status
 
 - ✅ **Android SDK setup**: COMPLETED
-- ✅ **Build AAB file**: COMPLETED (34MB file ready)
-- ⏳ **Play Store account verification**: IN PROGRESS (24-72 hours)
-- ⏸️ **Store listing completion**: PENDING (2-3 hours when account ready)
-- ⏸️ **App review by Google**: PENDING (1-3 days after submission)
+- ✅ **Build AAB file**: COMPLETED (v1.0.2, 34MB, versionCode 2)
+- ✅ **Play Store account verification**: COMPLETED
+- ✅ **Closed Testing setup**: COMPLETED (AAB uploaded)
+- 🔄 **Recruit 12+ testers**: IN PROGRESS (need to start immediately)
+- ⏳ **14-day testing period**: NOT STARTED (starts when 12+ testers opt-in)
+- ⏸️ **Apply for production access**: PENDING (after 14 days)
+- ⏸️ **Production app review**: PENDING (1-3 days after production submission)
 
-**Estimated time to publish**: 2-5 days from now (depending on account verification)
+**Estimated time to publish**: 17-21 days from when testers opt-in (14 days testing + 3-7 days for approval/review)
 
 ## 🎯 For Next Claude Session
 
-**Current Status**: All technical work completed. AAB file built and ready. Waiting for Google Play Developer account identity verification to complete.
+**Current Status**: AAB v1.0.2 uploaded to Closed Testing. All technical work complete. Now recruiting 12+ testers for required 14-day testing period.
 
-**Immediate Next Action**: Check [play.google.com/console](https://play.google.com/console) for account approval, then upload AAB file and complete store listing.
+**Immediate Next Action**: Recruit beta testers using free platforms (Reddit, BetaList) and/or paid services (BetaFamily). Share opt-in link from Google Play Console.
 
 **Key Files Ready**:
-- Production AAB: `app/build/outputs/bundle/release/app-release.aab` (34MB)
+- Production AAB: `app/build/outputs/bundle/release/app-release.aab` (v1.0.2, versionCode 2, 34MB)
 - Keystore: `android/app/notesy-release-key.keystore`
 - Store icon: `play-store-icon-1024x1024.png`
 
+**Recent Changes (v1.0.2)**:
+- Fixed text alignment in notes on Android (top-left positioning)
+- Feedback button now hides when keyboard is active
+- Updated to target Android API 35
+
+**Timeline**:
+- Testers needed: 12+ people
+- Testing period: 14 consecutive days
+- Production access: Apply after 14 days complete
+- Estimated launch: 17-21 days from tester opt-in
+
 ---
 
-*Last Updated: October 18, 2025*
-*App Status: READY FOR UPLOAD - Waiting for Google Play Developer verification*
+*Last Updated: October 21, 2025*
+*App Status: CLOSED TESTING - Recruiting 12+ testers for 14-day period*

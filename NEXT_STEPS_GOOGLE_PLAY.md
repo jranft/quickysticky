@@ -83,7 +83,7 @@ This generates:
 
 - **Package Name**: com.notesy
 - **Version**: 1.0.0 (Version Code: 1)
-- **Target SDK**: 34 (Android 14)
+- **Target SDK**: 35 (Android 15)
 - **Min SDK**: 24 (Android 7.0+)
 - **Signing**: Production keystore (SHA256 configured)
 
