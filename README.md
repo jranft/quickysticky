@@ -20,10 +20,10 @@ This project is in **CLOSED TESTING** phase. AAB file (v1.0.2) is built and read
 ## 📱 Project Information
 
 - **App Name**: Notesy
-- **Package**: com.notesy (Android) / iOS bundle configured
-- **Version**: 1.0.2 (Version Code: 2)
+- **Package**: com.notesy (Android) / com.joeranft.notesy (iOS)
+- **Version**: 1.1.0 (Build: 1)
 - **Framework**: React Native 0.76.5 with TypeScript
-- **Target SDK**: Android 35, iOS 15+
+- **Target SDK**: Android 35, iOS 15.1+
 - **Firebase Project**: notesy-ios (with Android app added)
 
 ## 🔧 Quick Setup
@@ -72,11 +72,28 @@ If everything is set up _correctly_, you should see your new app running in your
 
 This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
 
-## 🏗️ Production Build (Google Play Store)
+## 🏗️ Production Builds
+
+### iOS App Store / TestFlight
+
+For iOS deployment, you need Xcode 16.1+ installed:
+
+1. Open the workspace: `open ios/Notesy.xcworkspace`
+2. Select "Any iOS Device" as destination
+3. **Product → Archive**
+4. When complete, distribute to TestFlight via Organizer window
+
+**Important iOS Notes:**
+- Hermes dSYM generation is configured for App Store uploads
+- All iPad orientations supported for multitasking
+- Automatic code signing configured with Team ID: 223549MKA3
+- Firebase Analytics configured with `ios/GoogleService-Info.plist`
+
+### Android Google Play Store
 
 For Google Play Store deployment, you need Android Studio and SDK installed:
 
-### Build Release AAB
+#### Build Release AAB
 ```bash
 cd android
 ./gradlew bundleRelease
@@ -84,7 +101,7 @@ cd android
 
 Output: `android/app/build/outputs/bundle/release/app-release.aab`
 
-### Build Release APK (for testing)
+#### Build Release APK (for testing)
 ```bash
 cd android
 ./gradlew assembleRelease
@@ -92,20 +109,30 @@ cd android
 
 ## 🔐 Production Configuration
 
-### Keystore Information
+### iOS Configuration
+- **Bundle ID**: com.joeranft.notesy
+- **Team ID**: 223549MKA3
+- **Deployment Target**: iOS 15.1+
+- **Signing**: Automatic (managed by Xcode)
+- **Firebase Config**: `ios/GoogleService-Info.plist`
+
+### Android Keystore Information
 - **File**: `android/app/notesy-release-key.keystore`
 - **Alias**: notesy-key-alias
 - **Passwords**: notesy123 (store and key)
 
 ### Firebase Analytics
 - **Project**: notesy-ios
+- **iOS Bundle**: com.joeranft.notesy
 - **Android Package**: com.notesy
-- **Configuration**: `android/app/google-services.json` (real credentials configured)
+- **iOS Config**: `ios/GoogleService-Info.plist` (real credentials configured)
+- **Android Config**: `android/app/google-services.json` (real credentials configured)
 
 ## 📚 Documentation
 
-- **[NEXT_STEPS.md](./NEXT_STEPS.md)** - Complete deployment guide
+- **[NEXT_STEPS.md](./NEXT_STEPS.md)** - Complete deployment guide for both platforms
 - **[GOOGLE_PLAY_DEPLOYMENT_GUIDE.md](./GOOGLE_PLAY_DEPLOYMENT_GUIDE.md)** - Detailed Play Store instructions
+- **[NEXT_STEPS_GOOGLE_PLAY.md](./NEXT_STEPS_GOOGLE_PLAY.md)** - Quick reference for Google Play
 
 ## 📱 App Architecture
 
@@ -130,7 +157,16 @@ cd android
 
 ## 🚀 Deployment Status
 
-- ✅ **iOS**: Ready for App Store (Xcode project configured)
+### iOS App Store
+- ✅ **Xcode Setup**: Xcode 16.1.1 installed and configured
+- ✅ **Code Signing**: Automatic signing configured with Apple Developer account
+- ✅ **Version**: 1.1.0 (Build 1)
+- ✅ **Hermes dSYM**: Configured for App Store uploads
+- ✅ **iPad Support**: All orientations enabled for multitasking
+- ✅ **Firebase**: Analytics configured with production credentials
+- 🚀 **Ready**: Archive and upload to TestFlight via Xcode
+
+### Android Google Play Store
 - ✅ **Android Build**: AAB file v1.0.2 built (34MB) - includes text alignment and UX fixes
 - ✅ **Firebase**: Production analytics configured with real credentials
 - ✅ **Signing**: Production keystore generated and working

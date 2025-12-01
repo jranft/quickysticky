@@ -2,15 +2,40 @@
 
 ## 📱 Current Project Status
 
-**Notesy** is a React Native sticky notes app in **CLOSED TESTING** phase. AAB v1.0.2 is uploaded to Google Play Console. Currently recruiting 12+ testers for the required 14-day testing period before production release.
+**Notesy** is a React Native sticky notes app ready for deployment on both iOS and Android platforms.
 
-### ✅ Completed Setup
+### iOS Status
+- ✅ **Version 1.1.0 (Build 1)** ready for TestFlight
+- ✅ Xcode 16.1.1 configured with automatic signing
+- ✅ Hermes dSYM generation configured
+- ✅ All iPad orientations enabled
+- 🚀 **Ready to archive and upload**
+
+### Android Status
+- 🧪 **CLOSED TESTING** phase - AAB v1.0.2 uploaded to Google Play Console
+- Currently recruiting 12+ testers for the required 14-day testing period before production release
+
+### ✅ Completed Setup (Both Platforms)
 - [x] React Native 0.76.5 with TypeScript configuration
-- [x] Firebase Analytics integration with real credentials
-- [x] Production keystore generated (`android/app/notesy-release-key.keystore`)
-- [x] Android build configuration (minSdk: 24, targetSdk: 35)
+- [x] Firebase Analytics integration with real credentials (iOS & Android)
 - [x] Custom font integration (Rounded Mplus 1c Bold)
 - [x] App icons and assets prepared
+
+### ✅ iOS Completed
+- [x] iOS bundle: `com.joeranft.notesy`
+- [x] iOS version: 1.1.0 (Build 1)
+- [x] Xcode 16.1.1 installed and configured
+- [x] Apple Developer account signed in
+- [x] Automatic code signing configured (Team ID: 223549MKA3)
+- [x] Hermes dSYM generation configured for App Store uploads
+- [x] iPad multitasking support (all orientations enabled)
+- [x] Info.plist configured with proper orientation support
+- [x] CocoaPods dependencies installed
+- [x] Firebase iOS app configured
+
+### ✅ Android Completed
+- [x] Production keystore generated (`android/app/notesy-release-key.keystore`)
+- [x] Android build configuration (minSdk: 24, targetSdk: 35)
 - [x] Package name: `com.notesy`
 - [x] App version: 1.0.2 (version code: 2)
 - [x] Android Studio and SDK installed
@@ -25,6 +50,37 @@
 **Closed Testing Requirement**: Need 12+ testers opted-in for 14 consecutive days before production access
 
 ### 📋 Immediate Next Steps
+
+## 🍎 iOS Deployment to TestFlight
+
+### 1. Create Archive in Xcode
+
+1. Open Xcode workspace:
+   ```bash
+   open ios/Notesy.xcworkspace
+   ```
+
+2. In Xcode:
+   - Select **"Any iOS Device"** as destination (top toolbar)
+   - Go to **Product → Clean Build Folder** (hold Option key)
+   - Go to **Product → Archive**
+   - Wait for archive to complete (may take several minutes)
+
+3. When Organizer window appears:
+   - Click **"Distribute App"**
+   - Select **"TestFlight & App Store"**
+   - Click **"Next"** and follow prompts
+   - Xcode will upload your app to App Store Connect
+
+4. After upload:
+   - Go to [App Store Connect](https://appstoreconnect.apple.com/)
+   - Navigate to your app → TestFlight
+   - Add internal or external testers
+   - Submit for Beta App Review (required for external testing)
+
+**Note**: TestFlight beta review typically takes 24-48 hours.
+
+## 🤖 Android Deployment (Currently in Progress)
 
 #### 1. Recruit 12+ Beta Testers (IMMEDIATE ACTION REQUIRED)
 
@@ -59,7 +115,13 @@
 
 ## 🔒 Important Security Information
 
-### Production Keystore Details
+### iOS Configuration
+- **Bundle ID**: com.joeranft.notesy
+- **Team ID**: 223549MKA3
+- **Signing**: Automatic (managed by Xcode/Apple Developer account)
+- **Firebase Config**: `ios/GoogleService-Info.plist`
+
+### Android Production Keystore Details
 - **File**: `android/app/notesy-release-key.keystore`
 - **Alias**: notesy-key-alias
 - **Store Password**: notesy123
@@ -70,8 +132,9 @@
 
 ### Firebase Configuration
 - Project ID: `notesy-ios`
-- Android app added with package: `com.notesy`
-- Analytics enabled and configured
+- iOS app: Bundle `com.joeranft.notesy`
+- Android app: Package `com.notesy`
+- Analytics enabled and configured for both platforms
 
 ## 📋 Store Listing Requirements (Prepare These Now)
 
@@ -129,7 +192,20 @@ npm run android             # Run on Android device/emulator
 npm run ios                 # Run on iOS device/simulator
 ```
 
-### Production Build
+### iOS Production Build
+```bash
+open ios/Notesy.xcworkspace  # Open in Xcode
+# Then use Product → Archive in Xcode
+```
+
+Or install CocoaPods dependencies manually:
+```bash
+cd ios
+pod install
+cd ..
+```
+
+### Android Production Build
 ```bash
 cd android
 ./gradlew clean             # Clean build
@@ -182,6 +258,30 @@ Before uploading to Play Store:
 
 ## 🎯 For Next Claude Session
 
+### iOS Status
+**Current Status**: Version 1.1.0 (Build 1) ready for TestFlight upload
+
+**Immediate Next Action**: Create archive in Xcode and upload to TestFlight
+
+**Key Configuration**:
+- Bundle ID: com.joeranft.notesy
+- Team ID: 223549MKA3
+- Xcode: 16.1.1
+- Firebase config: `ios/GoogleService-Info.plist`
+
+**Recent iOS Changes (v1.1.0)**:
+- Updated version from 1.0.2 to 1.1.0
+- Reset build number to 1
+- Fixed Hermes dSYM generation for App Store uploads (added post_install hook in Podfile)
+- Enabled all iPad orientations for multitasking compliance
+- Configured automatic code signing
+
+**iOS Known Issues Fixed**:
+- ✅ Hermes dSYM missing - Fixed with Podfile post_install hook
+- ✅ iPad orientation validation - Fixed by adding all 4 orientations to Info.plist
+- ✅ Code signing - Resolved with Apple Developer account login
+
+### Android Status
 **Current Status**: AAB v1.0.2 uploaded to Closed Testing. All technical work complete. Now recruiting 12+ testers for required 14-day testing period.
 
 **Immediate Next Action**: Recruit beta testers using free platforms (Reddit, BetaList) and/or paid services (BetaFamily). Share opt-in link from Google Play Console.
@@ -196,7 +296,7 @@ Before uploading to Play Store:
 - Feedback button now hides when keyboard is active
 - Updated to target Android API 35
 
-**Timeline**:
+**Android Timeline**:
 - Testers needed: 12+ people
 - Testing period: 14 consecutive days
 - Production access: Apply after 14 days complete
@@ -204,5 +304,6 @@ Before uploading to Play Store:
 
 ---
 
-*Last Updated: October 21, 2025*
-*App Status: CLOSED TESTING - Recruiting 12+ testers for 14-day period*
+*Last Updated: December 1, 2025*
+*iOS Status: READY FOR TESTFLIGHT - Archive and upload via Xcode*
+*Android Status: CLOSED TESTING - Recruiting 12+ testers for 14-day period*
