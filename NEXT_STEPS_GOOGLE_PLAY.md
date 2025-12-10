@@ -82,7 +82,7 @@ This generates:
 ## 🔧 Build Information
 
 - **Package Name**: com.notesy
-- **Version**: 1.0.0 (Version Code: 1)
+- **Version**: 1.1.0 (Version Code: 3)
 - **Target SDK**: 35 (Android 15)
 - **Min SDK**: 24 (Android 7.0+)
 - **Signing**: Production keystore (SHA256 configured)

@@ -12,7 +12,7 @@
 - 🚀 **Ready to archive and upload**
 
 ### Android Status
-- 🧪 **CLOSED TESTING** phase - AAB v1.0.2 uploaded to Google Play Console
+- 🧪 **CLOSED TESTING** phase - AAB v1.1.0 uploaded to Google Play Console
 - Currently recruiting 12+ testers for the required 14-day testing period before production release
 
 ### ✅ Completed Setup (Both Platforms)
@@ -37,13 +37,13 @@
 - [x] Production keystore generated (`android/app/notesy-release-key.keystore`)
 - [x] Android build configuration (minSdk: 24, targetSdk: 35)
 - [x] Package name: `com.notesy`
-- [x] App version: 1.0.2 (version code: 2)
+- [x] App version: 1.1.0 (version code: 3)
 - [x] Android Studio and SDK installed
 - [x] Production AAB file built (34MB at `app/build/outputs/bundle/release/app-release.aab`)
 - [x] Google Play Developer account created, paid ($25), and verified
 - [x] Android-specific fixes applied (text alignment, keyboard UX improvements)
 - [x] Target SDK updated to Android 35 (API level 35)
-- [x] AAB v1.0.2 uploaded to Closed Testing track
+- [x] AAB v1.1.0 uploaded to Closed Testing track
 
 ### 🧪 Current Status: RECRUITING BETA TESTERS
 
@@ -246,7 +246,7 @@ Before uploading to Play Store:
 ## 📅 Current Timeline Status
 
 - ✅ **Android SDK setup**: COMPLETED
-- ✅ **Build AAB file**: COMPLETED (v1.0.2, 34MB, versionCode 2)
+- ✅ **Build AAB file**: COMPLETED (v1.1.0, 34MB, versionCode 3)
 - ✅ **Play Store account verification**: COMPLETED
 - ✅ **Closed Testing setup**: COMPLETED (AAB uploaded)
 - 🔄 **Recruit 12+ testers**: IN PROGRESS (need to start immediately)
@@ -282,16 +282,16 @@ Before uploading to Play Store:
 - ✅ Code signing - Resolved with Apple Developer account login
 
 ### Android Status
-**Current Status**: AAB v1.0.2 uploaded to Closed Testing. All technical work complete. Now recruiting 12+ testers for required 14-day testing period.
+**Current Status**: AAB v1.1.0 uploaded to Closed Testing. All technical work complete. Now recruiting 12+ testers for required 14-day testing period.
 
 **Immediate Next Action**: Recruit beta testers using free platforms (Reddit, BetaList) and/or paid services (BetaFamily). Share opt-in link from Google Play Console.
 
 **Key Files Ready**:
-- Production AAB: `app/build/outputs/bundle/release/app-release.aab` (v1.0.2, versionCode 2, 34MB)
+- Production AAB: `app/build/outputs/bundle/release/app-release.aab` (v1.1.0, versionCode 3, 34MB)
 - Keystore: `android/app/notesy-release-key.keystore`
 - Store icon: `play-store-icon-1024x1024.png`
 
-**Recent Changes (v1.0.2)**:
+**Recent Changes (v1.1.0)**:
 - Fixed text alignment in notes on Android (top-left positioning)
 - Feedback button now hides when keyboard is active
 - Updated to target Android API 35

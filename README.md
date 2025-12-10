@@ -4,7 +4,7 @@
 
 ## 🚀 App Status: IN CLOSED TESTING - RECRUITING TESTERS
 
-This project is in **CLOSED TESTING** phase. AAB file (v1.0.2) is built and ready. Currently recruiting 12+ testers for the required 14-day testing period before production release.
+This project is in **CLOSED TESTING** phase. AAB file (v1.1.0) is built and ready. Currently recruiting 12+ testers for the required 14-day testing period before production release.
 
 ## ✨ Features
 
@@ -167,14 +167,14 @@ cd android
 - 🚀 **Ready**: Archive and upload to TestFlight via Xcode
 
 ### Android Google Play Store
-- ✅ **Android Build**: AAB file v1.0.2 built (34MB) - includes text alignment and UX fixes
+- ✅ **Android Build**: AAB file v1.1.0 built (34MB) - includes text alignment and UX fixes
 - ✅ **Firebase**: Production analytics configured with real credentials
 - ✅ **Signing**: Production keystore generated and working
 - ✅ **Build System**: Android Studio and SDK installed and configured
 - ✅ **Google Play Account**: Verified and active
 - 🧪 **Closed Testing**: AAB uploaded, recruiting 12+ testers for 14-day testing period
 - ⏳ **Production Access**: Waiting for testing period completion
-- 📦 **AAB File**: `app/build/outputs/bundle/release/app-release.aab` (v1.0.2, versionCode 2)
+- 📦 **AAB File**: `app/build/outputs/bundle/release/app-release.aab` (v1.1.0, versionCode 3)
 
 ## 🔧 Troubleshooting
 
